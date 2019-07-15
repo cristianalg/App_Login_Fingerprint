@@ -10,4 +10,5 @@
     <string name="sign_up">SIGN UP</string>
     <string name="with_fingerprint">With Fingerprint</string>
     <string name="with_fingerprint_and_password">With Fingerprint and Password</string>
+    <string name="login">LOGIN</string>
 </resources>
