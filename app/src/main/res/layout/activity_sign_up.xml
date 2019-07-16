@@ -14,6 +14,7 @@
     android:background="@color/colorBorder"
     tools:context=".SignUpActivity">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,17 +42,16 @@
                 app:cardElevation="3dp"
                 app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:id="@+id/username"
-                    android:layout_width="410dp"
-                    android:layout_height="44dp"
-                    android:background="@android:color/transparent"
-                    android:hint="@string/username_hint"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:padding="@dimen/_12sdp"
-                    android:textColor="@color/colorBlack"
-                    android:textColorHint="@color/colorLight" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/username" />
+                </com.google.android.material.textfield.TextInputLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -61,17 +61,16 @@
                 app:cardElevation="3dp"
                 app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:id="@+id/email"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
-                    android:hint="@string/email_hint"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:padding="@dimen/_12sdp"
-                    android:textColor="@color/colorBlack"
-                    android:textColorHint="@color/colorLight" />
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/e_mail" />
+                </com.google.android.material.textfield.TextInputLayout>
             </androidx.cardview.widget.CardView>
 
 
@@ -83,18 +82,17 @@
                 app:cardElevation="3dp"
                 app:cardUseCompatPadding="true">
 
-                <TextView
-                    android:id="@+id/password"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/password_hint"
-                    android:textColorHint="@color/colorLight"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:background="@android:color/transparent"
-                    android:textColor="@color/colorBlack"
-                    android:padding="@dimen/_12sdp" />
-            </androidx.cardview.widget.CardView>
+                    android:hint="@string/password" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
 
 
             <RadioGroup

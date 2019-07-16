@@ -3,12 +3,12 @@
     <string name="Text_Butn_sign_in">SIGN IN</string>
     <string name="Text_Butn_sign_up">SIGN UP</string>
     <string name="login_with_fingerprint">LOGIN WITH FINGERPRINT</string>
-    <string name="username_hint">Username</string>
-    <string name="email_hint">Email</string>
-    <string name="password_hint">Password</string>
     <string name="sign_in">SIGN IN</string>
     <string name="sign_up">SIGN UP</string>
     <string name="with_fingerprint">With Fingerprint</string>
     <string name="with_fingerprint_and_password">With Fingerprint and Password</string>
     <string name="login">LOGIN</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="e_mail">E-mail</string>
 </resources>
