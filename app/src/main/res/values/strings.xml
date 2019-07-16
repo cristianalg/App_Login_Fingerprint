@@ -11,4 +11,9 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="e_mail">E-mail</string>
+    <string name="authenticate_fingerprint">Erro ao autenticar impressão digital</string>
+    <string name="auth_successful">Autenticação de impressão digital com sucesso</string>
+    <string name="Unknown_permission_request">Pedido de permissão não reconhecido</string>
+    <string name="permission_refused">"Recusou permissão de impressão digital"</string>
+
 </resources>
