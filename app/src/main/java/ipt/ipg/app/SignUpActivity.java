@@ -1,5 +1,6 @@
 package ipt.ipg.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.gson.Gson;
 
 
 public class SignUpActivity extends AppCompatActivity {
@@ -59,8 +62,20 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Todos os campos devem ser preenchidos", Toast.LENGTH_LONG).show();
                 }else if(selectedButtonId == -1){
                     Toast.makeText(SignUpActivity.this, "Opção de login deve ser selecionada", Toast.LENGTH_LONG).show();
+                }else{
+                    Gson gson = ((CustomApplication)getApplication()).getGsonObject();
+                    UserObject userData = new UserObject(usernameValue, emailValue, passwordValue, loginOption);
+                    String userDataString = gson.toJson(userData);
+                    CustomSharedPreference pref = ((CustomApplication)getApplication()).getShared();
+                    pref.setUserData(userDataString);
+
+                    editTextUsername.setText("");
+                    editTextEmail.setText("");
+                    editTextPassword.setText("");
+
+                    Intent loginIntent = new Intent(SignUpActivity.this, LoginActivity.class);
+                    startActivity(loginIntent);
                 }
-                //...
             }
         });
     }
